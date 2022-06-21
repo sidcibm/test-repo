@@ -5,15 +5,12 @@ name: Docker
 # separate terms of service, privacy policy, and support
 # documentation.
 
+# Only trigger, when the build workflow succeeded
 on:
-  schedule:
-    - cron: '44 13 * * *'
-  push:
-    branches: [ "main" ]
-    # Publish semver tags as releases.
-    tags: [ 'v*.*.*' ]
-  pull_request:
-    branches: [ "main" ]
+  workflow_run:
+    workflows: ["Java CI with Maven"]
+    types:
+      - completed
 
 env:
   # Use docker.io for Docker Hub if empty
