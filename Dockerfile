@@ -1,3 +1,3 @@
 FROM openjdk:11
-WORKDIR /home/runner/work/test-repo/test-repo/target/classes
+WORKDIR target/classes
 CMD ["java", "Main"]
