@@ -1,4 +1,3 @@
 FROM openjdk:11
-COPY . /usr/src/myapp
-WORKDIR /usr/src/myapp/target/classes
+WORKDIR /home/runner/work/test-repo/test-repo/target/classes
 CMD ["java", "Main"]
