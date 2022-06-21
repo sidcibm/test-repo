@@ -1,3 +1,4 @@
 FROM openjdk:11
-WORKDIR target/classes
+COPY . /usr/src/myapp
+WORKDIR /usr/src/myapp/target/classes
 CMD ["java", "Main"]
